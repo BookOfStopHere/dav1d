@@ -54,6 +54,14 @@ dav1d_inc_dirs = include_directories(['.', 'include/dav1d', 'include'])
 # Option handling
 #
 
+# added for arm64
+[host_machine]
+system = 'linux'
+cpu_family = 'aarch64'
+cpu = 'aarch64'
+endian = 'little'
+##
+
 # Bitdepth option
 dav1d_bitdepths = get_option('bitdepths')
 foreach bitdepth : ['8', '16']
